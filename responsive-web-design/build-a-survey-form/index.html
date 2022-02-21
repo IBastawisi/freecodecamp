@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>FCC: Survey Form</title>
+	<meta name="theme-color" content="#007bff">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+	<!-- Required styles for Material Web -->
+	<link rel="stylesheet" href="https://unpkg.com/material-components-web@13.0.0/dist/material-components-web.min.css">
+
+	<style>
+		body {
+			margin: 0;
+		}
+
+		.text-center {
+			text-align: center;
+		}
+
+		header {
+			padding: 1rem;
+		}
+
+		.container {
+			padding: 1rem;
+			margin: 0 auto;
+		}
+
+		form {
+			margin: 0 auto 1rem;
+			width: 500px;
+			max-width: 100%;
+		}
+
+		.mdc-form-field--full-width {
+			width: 100%;
+			margin-bottom: 1rem;
+			flex-wrap: wrap;
+		}
+
+		.mdc-form-field--full-width>label {
+			width: 100%;
+			margin-bottom: 0.25rem;
+		}
+
+		.mdc-text-field,
+		.mdc-select {
+			width: 100%;
+			height: 40px;
+		}
+
+		.mdc-text-field--textarea {
+			height: auto;
+		}
+
+		.mdc-select--outlined .mdc-select__anchor {
+			height: 40px;
+		}
+	</style>
+</head>
+
+<body class="mdc-typography">
+
+	<main id="main">
+		<div class="container">
+			<header class="header">
+				<h1 id="title" class="text-center">freeCodeCamp Survey Form</h1>
+				<p id="description" class="description text-center">
+					Thank you for taking the time to help us improve the platform
+				</p>
+			</header>
+			<form id="survey-form">
+				<div class="mdc-form-field mdc-form-field--align-end mdc-form-field--full-width"
+					data-mdc-auto-init="MDCFormField">
+					<label id="name-label" for="name">Name</label>
+					<div class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label"
+						data-mdc-auto-init="MDCTextField">
+						<span class="mdc-notched-outline">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+						<input id="name" name="name" class="mdc-text-field__input" type="text" aria-label="Name"
+							placeholder="Enter your name" required>
+					</div>
+				</div>
+				<div class="mdc-form-field mdc-form-field--align-end mdc-form-field--full-width"
+					data-mdc-auto-init="MDCFormField">
+					<label id="email-label" for="email">Email</label>
+					<div class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label"
+						data-mdc-auto-init="MDCTextField">
+						<span class="mdc-notched-outline">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+						<input id="email" name="email" class="mdc-text-field__input" type="email" aria-label="Email"
+							placeholder="Enter your email" required>
+					</div>
+				</div>
+				<div class="mdc-form-field mdc-form-field--align-end mdc-form-field--full-width"
+					data-mdc-auto-init="MDCFormField">
+					<label id="number-label" for="number">age</label>
+					<div class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label"
+						data-mdc-auto-init="MDCTextField">
+						<span class="mdc-notched-outline">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+						<input id="number" name="number" class="mdc-text-field__input" type="number" min="10" max="99" aria-label="age"
+							placeholder="Enter your age">
+					</div>
+				</div>
+				<div class="mdc-form-field mdc-form-field--align-end mdc-form-field--full-width"
+					data-mdc-auto-init="MDCFormField">
+					<label>Which option best describes your current role?</label>
+					<div class="mdc-select mdc-select--outlined mdc-select--no-label mdc-select--required"
+						data-mdc-auto-init="MDCSelect">
+						<input type="hidden" id="current-role" name="current-role" required>
+						<div class="mdc-select__anchor" aria-required="true">
+							<span class="mdc-notched-outline">
+								<span class="mdc-notched-outline__leading"></span>
+								<span class="mdc-notched-outline__trailing"></span>
+							</span>
+							<span class="mdc-select__selected-text-container">
+								<span class="mdc-select__selected-text">Select current role</span>
+							</span>
+							<span class="mdc-select__dropdown-icon">
+								<svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false">
+									<polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd"
+										points="7 10 12 15 17 10">
+									</polygon>
+									<polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd"
+										points="7 15 12 10 17 15">
+									</polygon>
+								</svg>
+							</span>
+						</div>
+
+						<div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+							<ul class="mdc-deprecated-list mdc-deprecated-list--dense " role="listbox"
+								aria-label="roles listbox">
+								<li class="mdc-deprecated-list-item mdc-deprecated-list-item--disabled" aria-disabled="true"
+									aria-selected="true" data-value="" role="option">
+									<span class="mdc-deprecated-list-item__ripple"></span>
+									<span class="mdc-deprecated-list-item__text">
+										Select current role
+									</span>
+								</li>
+								<li class="mdc-deprecated-list-item" aria-selected="false" data-value="student" role="option">
+									<span class="mdc-deprecated-list-item__ripple"></span>
+									<span class="mdc-deprecated-list-item__text">
+										Student
+									</span>
+								</li>
+								<li class="mdc-deprecated-list-item" aria-selected="false" data-value="job" role="option">
+									<span class="mdc-deprecated-list-item__ripple"></span>
+									<span class="mdc-deprecated-list-item__text">
+										Full Time Job
+									</span>
+								</li>
+								<li class="mdc-deprecated-list-item" aria-selected="false" data-value="learner" role="option">
+									<span class="mdc-deprecated-list-item__ripple"></span>
+									<span class="mdc-deprecated-list-item__text">
+										Full Time Learner
+									</span>
+								</li>
+								<li class="mdc-deprecated-list-item" aria-selected="false" data-value="other" role="option">
+									<span class="mdc-deprecated-list-item__ripple"></span>
+									<span class="mdc-deprecated-list-item__text">
+										Something else
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="mdc-form-field mdc-form-field--align-end mdc-form-field--full-width">
+					<label id="user-recommend-label" for="user-recommend">Would you recommend freeCodeCamp to a friend?</label>
+					<div class="mdc-form-field" data-mdc-auto-init="MDCFormField">
+						<div class="mdc-radio" data-mdc-auto-init="MDCRadio">
+							<input class="mdc-radio__native-control" type="radio" id="radio-1" value="definitely"
+								name="user-recommend" checked>
+							<div class="mdc-radio__background">
+								<div class="mdc-radio__outer-circle"></div>
+								<div class="mdc-radio__inner-circle"></div>
+							</div>
+							<div class="mdc-radio__ripple"></div>
+							<div class="mdc-radio__focus-ring"></div>
+						</div>
+						<label for="radio-1">Definitely</label>
+					</div>
+					<div class="mdc-form-field" data-mdc-auto-init="MDCFormField">
+						<div class="mdc-radio" data-mdc-auto-init="MDCRadio">
+							<input class="mdc-radio__native-control" type="radio" id="radio-2" value="maybe" name="user-recommend">
+							<div class="mdc-radio__background">
+								<div class="mdc-radio__outer-circle"></div>
+								<div class="mdc-radio__inner-circle"></div>
+							</div>
+							<div class="mdc-radio__ripple"></div>
+							<div class="mdc-radio__focus-ring"></div>
+						</div>
+						<label for="radio-2">Maybe</label>
+					</div>
+					<div class="mdc-form-field" data-mdc-auto-init="MDCFormField">
+						<div class="mdc-radio" data-mdc-auto-init="MDCRadio">
+							<input class="mdc-radio__native-control" type="radio" id="radio-3" value="not-sure" name="user-recommend">
+							<div class="mdc-radio__background">
+								<div class="mdc-radio__outer-circle"></div>
+								<div class="mdc-radio__inner-circle"></div>
+							</div>
+							<div class="mdc-radio__ripple"></div>
+							<div class="mdc-radio__focus-ring"></div>
+						</div>
+						<label for="radio-3">Not Sure</label>
+					</div>
+				</div>
+				<div class="mdc-form-field mdc-form-field--align-end mdc-form-field--full-width"
+					data-mdc-auto-init="MDCFormField">
+					<label>What is your favorite feature of freeCodeCamp?</label>
+					<div class="mdc-select mdc-select--outlined mdc-select--no-label mdc-select--required"
+						data-mdc-auto-init="MDCSelect">
+						<input type="hidden" id="most-like" name="mostLike" required>
+						<div class="mdc-select__anchor" aria-required="true">
+							<span class="mdc-notched-outline">
+								<span class="mdc-notched-outline__leading"></span>
+								<span class="mdc-notched-outline__trailing"></span>
+							</span>
+							<span class="mdc-select__selected-text-container">
+								<span class="mdc-select__selected-text">Select an option</span>
+							</span>
+							<span class="mdc-select__dropdown-icon">
+								<svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false">
+									<polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd"
+										points="7 10 12 15 17 10">
+									</polygon>
+									<polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd"
+										points="7 15 12 10 17 15">
+									</polygon>
+								</svg>
+							</span>
+						</div>
+
+						<div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+							<ul class="mdc-deprecated-list mdc-deprecated-list--dense " role="listbox"
+								aria-label="Most Liked listbox">
+								<li class="mdc-deprecated-list-item mdc-deprecated-list-item--disabled" aria-disabled="true"
+									aria-selected="true" data-value="" role="option">
+									<span class="mdc-deprecated-list-item__ripple"></span>
+									<span class="mdc-deprecated-list-item__text">
+										Select an option
+									</span>
+								</li>
+								<li class="mdc-deprecated-list-item" aria-selected="false" data-value="challenges" role="option">
+									<span class="mdc-deprecated-list-item__ripple"></span>
+									<span class="mdc-deprecated-list-item__text">
+										challenges
+									</span>
+								</li>
+								<li class="mdc-deprecated-list-item" aria-selected="false" data-value="projects" role="option">
+									<span class="mdc-deprecated-list-item__ripple"></span>
+									<span class="mdc-deprecated-list-item__text">
+										Projects
+									</span>
+								</li>
+								<li class="mdc-deprecated-list-item" aria-selected="false" data-value="community" role="option">
+									<span class="mdc-deprecated-list-item__ripple"></span>
+									<span class="mdc-deprecated-list-item__text">
+										Community
+									</span>
+								</li>
+								<li class="mdc-deprecated-list-item" aria-selected="false" data-value="open" role="option">
+									<span class="mdc-deprecated-list-item__ripple"></span>
+									<span class="mdc-deprecated-list-item__text">
+										Open Source
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="mdc-form-field mdc-form-field--full-width">
+					<label>
+						What would you like to see improved?<span class="mdc-typography--caption">(Check all that apply)</span>
+					</label>
+
+					<div class="mdc-form-field" data-mdc-auto-init="MDCFormField">
+						<div class="mdc-checkbox" data-mdc-auto-init="MDCCheckbox">
+							<input class="mdc-checkbox__native-control" id="C01" name="prefer" type="checkbox"
+								value="front-end-projects" />
+							<div class="mdc-checkbox__background"><svg class='mdc-checkbox__checkmark' viewBox='0 0 24 24'>
+									<path class='mdc-checkbox__checkmark-path' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59' />
+								</svg>
+								<div class='mdc-checkbox__mixedmark'></div>
+							</div>
+							<div class="mdc-checkbox__ripple"></div>
+						</div>
+						<label for="C01">Front-end Projects</label>
+					</div>
+
+
+					<div class="mdc-form-field" data-mdc-auto-init="MDCFormField">
+						<div class="mdc-checkbox" data-mdc-auto-init="MDCCheckbox">
+							<input checked="checked" class="mdc-checkbox__native-control" id="C02" name="prefer" type="checkbox"
+								value="back-end-projects" />
+							<div class="mdc-checkbox__background"><svg class='mdc-checkbox__checkmark' viewBox='0 0 24 24'>
+									<path class='mdc-checkbox__checkmark-path' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59' />
+								</svg>
+								<div class='mdc-checkbox__mixedmark'></div>
+							</div>
+							<div class="mdc-checkbox__ripple"></div>
+						</div>
+						<label for="C02">Back-end Projects</label>
+					</div>
+
+
+					<div class="mdc-form-field" data-mdc-auto-init="MDCFormField">
+						<div class="mdc-checkbox" data-mdc-auto-init="MDCCheckbox">
+							<input class="mdc-checkbox__native-control" id="C03" name="prefer" type="checkbox"
+								value="data-visualization" />
+							<div class="mdc-checkbox__background"><svg class='mdc-checkbox__checkmark' viewBox='0 0 24 24'>
+									<path class='mdc-checkbox__checkmark-path' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59' />
+								</svg>
+								<div class='mdc-checkbox__mixedmark'></div>
+							</div>
+							<div class="mdc-checkbox__ripple"></div>
+						</div>
+						<label for="C03">Data Visualization</label>
+					</div>
+
+
+
+					<div class="mdc-form-field" data-mdc-auto-init="MDCFormField">
+						<div class="mdc-checkbox" data-mdc-auto-init="MDCCheckbox">
+							<input class="mdc-checkbox__native-control" id="C04" name="prefer" type="checkbox" value="challenges" />
+							<div class="mdc-checkbox__background"><svg class='mdc-checkbox__checkmark' viewBox='0 0 24 24'>
+									<path class='mdc-checkbox__checkmark-path' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59' />
+								</svg>
+								<div class='mdc-checkbox__mixedmark'></div>
+							</div>
+							<div class="mdc-checkbox__ripple"></div>
+						</div><label for="C04">Challenges</label>
+					</div>
+					<div class="mdc-form-field" data-mdc-auto-init="MDCFormField">
+						<div class="mdc-checkbox" data-mdc-auto-init="MDCCheckbox">
+							<input class="mdc-checkbox__native-control" id="C05" name="prefer" type="checkbox"
+								value="open-source-community" />
+							<div class="mdc-checkbox__background"><svg class='mdc-checkbox__checkmark' viewBox='0 0 24 24'>
+									<path class='mdc-checkbox__checkmark-path' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59' />
+								</svg>
+								<div class='mdc-checkbox__mixedmark'></div>
+							</div>
+							<div class="mdc-checkbox__ripple"></div>
+						</div><label for="C05">Open Source
+							Community
+						</label>
+					</div>
+					<div class="mdc-form-field" data-mdc-auto-init="MDCFormField">
+						<div class="mdc-checkbox" data-mdc-auto-init="MDCCheckbox">
+							<input class="mdc-checkbox__native-control" id="C06" name="prefer" type="checkbox"
+								value="gitter-help-rooms" />
+							<div class="mdc-checkbox__background"><svg class='mdc-checkbox__checkmark' viewBox='0 0 24 24'>
+									<path class='mdc-checkbox__checkmark-path' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59' />
+								</svg>
+								<div class='mdc-checkbox__mixedmark'></div>
+							</div>
+							<div class="mdc-checkbox__ripple"></div>
+						</div><label for="C06">Gitter help
+							rooms
+						</label>
+					</div>
+					<div class="mdc-form-field" data-mdc-auto-init="MDCFormField">
+						<div class="mdc-checkbox" data-mdc-auto-init="MDCCheckbox">
+							<input class="mdc-checkbox__native-control" id="C07" name="prefer" type="checkbox" value="videos" />
+							<div class="mdc-checkbox__background"><svg class='mdc-checkbox__checkmark' viewBox='0 0 24 24'>
+									<path class='mdc-checkbox__checkmark-path' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59' />
+								</svg>
+								<div class='mdc-checkbox__mixedmark'></div>
+							</div>
+							<div class="mdc-checkbox__ripple"></div>
+						</div><label for="C07">Videos</label>
+					</div>
+					<div class="mdc-form-field" data-mdc-auto-init="MDCFormField">
+						<div class="mdc-checkbox" data-mdc-auto-init="MDCCheckbox">
+							<input class="mdc-checkbox__native-control" id="C08" name="prefer" type="checkbox" value="city-meetups" />
+							<div class="mdc-checkbox__background"><svg class='mdc-checkbox__checkmark' viewBox='0 0 24 24'>
+									<path class='mdc-checkbox__checkmark-path' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59' />
+								</svg>
+								<div class='mdc-checkbox__mixedmark'></div>
+							</div>
+							<div class="mdc-checkbox__ripple"></div>
+						</div><label for="C08">City Meetups</label>
+					</div>
+					<div class="mdc-form-field" data-mdc-auto-init="MDCFormField">
+						<div class="mdc-checkbox" data-mdc-auto-init="MDCCheckbox">
+							<input class="mdc-checkbox__native-control" id="C09" name="prefer" type="checkbox" value="wiki" />
+							<div class="mdc-checkbox__background"><svg class='mdc-checkbox__checkmark' viewBox='0 0 24 24'>
+									<path class='mdc-checkbox__checkmark-path' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59' />
+								</svg>
+								<div class='mdc-checkbox__mixedmark'></div>
+							</div>
+							<div class="mdc-checkbox__ripple"></div>
+						</div><label for="C09">Wiki</label>
+					</div>
+					<div class="mdc-form-field" data-mdc-auto-init="MDCFormField">
+						<div class="mdc-checkbox" data-mdc-auto-init="MDCCheckbox">
+							<input class="mdc-checkbox__native-control" id="C10" name="prefer" type="checkbox" value="forum" />
+							<div class="mdc-checkbox__background"><svg class='mdc-checkbox__checkmark' viewBox='0 0 24 24'>
+									<path class='mdc-checkbox__checkmark-path' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59' />
+								</svg>
+								<div class='mdc-checkbox__mixedmark'></div>
+							</div>
+							<div class="mdc-checkbox__ripple"></div>
+						</div><label for="C10">Forum</label>
+					</div>
+					<div class="mdc-form-field" data-mdc-auto-init="MDCFormField">
+						<div class="mdc-checkbox" data-mdc-auto-init="MDCCheckbox">
+							<input class="mdc-checkbox__native-control" id="C11" name="prefer" type="checkbox"
+								value="additional-courses" />
+							<div class="mdc-checkbox__background"><svg class='mdc-checkbox__checkmark' viewBox='0 0 24 24'>
+									<path class='mdc-checkbox__checkmark-path' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59' />
+								</svg>
+								<div class='mdc-checkbox__mixedmark'></div>
+							</div>
+							<div class="mdc-checkbox__ripple"></div>
+						</div>
+						<label for="C11">Additional
+							Courses
+						</label>
+					</div>
+				</div>
+
+				<div class="mdc-form-field mdc-form-field--align-end mdc-form-field--full-width" data-mdc-auto-init="
+					MDCFormField">
+					<label id="name-label" for="comments">Any comments or suggestions?</label>
+					<label class="mdc-text-field mdc-text-field--outlined mdc-text-field--textarea mdc-text-field--no-label"
+						data-mdc-auto-init="MDCTextField">
+						<span class="mdc-notched-outline">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+						<span class="mdc-text-field__resizer">
+							<textarea class="mdc-text-field__input" cols="2" id="comments" name="comments" aria-label="comments"
+								placeholder="Enter your comment here..."></textarea>
+						</span>
+					</label>
+				</div>
+
+				<div class="text-center">
+					<button type="submit" id="submit" class="mdc-button mdc-button--outlined" data-mdc-auto-init="MDCRipple">
+						<span class="mdc-button__ripple"></span>
+						<span class="mdc-button__focus-ring"></span>
+						<span class="mdc-button__label">Submit</span>
+					</button>
+				</div>
+			</form>
+		</div>
+
+	</main>
+
+	<!-- Required Material Web JavaScript library -->
+	<script src="https://unpkg.com/material-components-web@13.0.0/dist/material-components-web.min.js"></script>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			mdc.autoInit()
+		});
+
+		document.addEventListener("MDCAutoInit:End", function () {
+
+			for (let node of [].slice.call(document.querySelectorAll("[data-mdc-auto-init]"))) {
+				const ctorName = node.getAttribute("data-mdc-auto-init");
+				const component = node[ctorName];
+				if (!component) return;
+
+				const foundation = component.foundation;
+				const adapter = component.foundation.adapter;
+				const dataset = node.dataset;
+
+				switch (ctorName) {
+
+					case 'MDCCheckbox': {
+						if ('onchange' in dataset) {
+							const handler = new Function('event', dataset["onchange"]).bind(component);
+							component.listen('change', handler)
+							delete dataset['onchange'];
+						}
+					} break;
+					case 'MDCFormField': {
+						const childComponent = node.querySelector("[data-mdc-auto-init]");
+						const componentCtor = childComponent.getAttribute("data-mdc-auto-init");
+						component.input = childComponent[componentCtor];
+					} break;
+					case 'MDCRadio': {
+						if ('onchange' in dataset) {
+							const handler = new Function('event', dataset["onchange"]).bind(component);
+							component.listen('change', handler)
+							delete dataset['onchange']
+						}
+					} break;
+					case 'MDCSelect': {
+						const searchbox = component.menuElement.querySelector('.mdc-text-field');
+						const items = component.menu.items;
+
+						if ('onchange' in dataset) {
+							const handler = new Function('event', dataset["onchange"]).bind(component);
+							component.listen('MDCSelect:change', handler)
+							delete dataset['onchange']
+						}
+						if ('onopen' in dataset) {
+							const handler = new Function(dataset["onopen"]).bind(component);
+							foundation.handleMenuOpened = (f => () => { f(); handler(); })(foundation.handleMenuOpened.bind(foundation));
+							delete dataset['onopen']
+						}
+					} break;
+					default:
+				}
+
+			}
+
+		});
+	</script>
+</body
